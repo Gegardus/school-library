@@ -6,10 +6,7 @@ class Student < Person
     super(age, name, parent_permission)
   end
 
-  def  play_hooky
+  def play_hooky
     "¯\(ツ)/¯"
   end
 end
-
-
- 

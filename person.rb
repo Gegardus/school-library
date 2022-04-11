@@ -12,9 +12,10 @@ end
   def is_of_age?    
     @age >= 18
   end
-  :is_of_age? private
+
+  private :is_of_age?
 
   def can_use_services?
-    of_age || @parent_permission  
+    is_of_age || @parent_permission  
   end
 end
