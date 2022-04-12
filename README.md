@@ -2,7 +2,7 @@
 
 ## Description
 
-> This is a school library app. 
+> This is a school library app.
 
 ## Built With
 
@@ -12,10 +12,12 @@
 
 To get the content of this project locally you need to run these commands in your terminal.
 Before starting the steps below, be sure you have [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/).
+
 1. Download the `Zip` or clone with `git clone git@github.com:Gegardus/school-library.git`
 2. `cd school-library`
 
 To Start the programs and test
+
 - open terminal
 - run the command $irb (interactive ruby shell)
 - run the program functions
