@@ -15,10 +15,15 @@ Before starting the steps below, be sure you have [Git](https://www.linode.com/d
 1. Download the `Zip` or clone with `git clone git@github.com:Gegardus/school-library.git`
 2. `cd school-library`
 
-To Start the programs
+To Start the programs and test
 - open terminal
 - run the command $irb (interactive ruby shell)
 - run the program functions
+
+OR
+
+- open terminal
+- run ruby person.rb
 
 ## Author
 
