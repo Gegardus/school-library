@@ -22,11 +22,6 @@ To Start the programs and test
 - run the command $irb (interactive ruby shell)
 - run the program functions
 
-OR
-
-- open terminal
-- run ruby person.rb
-
 ## Author
 
 👤 **Vahan Khachvankian**
