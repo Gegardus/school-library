@@ -15,7 +15,7 @@ class App
   def run
     puts 'Welcome to School Library app!'
     until menu
-      input = gets.chomp   
+      input = gets.chomp
       if input == '7'
         puts 'Thank You for using this app!'
         break
@@ -59,12 +59,12 @@ class App
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
-      student = Student.new(age, 'classroom', name, parent_permission: false)     
+      student = Student.new(age, 'classroom', name, parent_permission: false)
     when 'y'
-      student = Student.new(age, 'classroom', name, parent_permission: true)    
+      student = Student.new(age, 'classroom', name, parent_permission: true)
     end
     @persons << student
-      puts 'Student created successfully'
+      puts 'Student created successfully.'
   end
 
   def create_teacher
@@ -114,7 +114,7 @@ class App
   end
 
   def list_all_rentals
-    puts 'No person available' if @persons.empty?
+    return puts 'No person available' if @persons.empty?
 
     print 'ID of the person: '
 
@@ -122,15 +122,9 @@ class App
     person_fetch = @persons.select { |person| person.id == person_id }
 
     puts 'Rentals: '
-    unless person_fetch.empty?
-    person_fetch[0].rentals.each do |rental|
-
-      puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}" 
-
-    rescue
-
-      puts 'No records found for the given ID'
+    return puts 'No records where found for the given ID' if person_fetch.empty?
+      person_fetch[0].rentals.each do |rental|
+        puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
       end
-    end
-  end
+      end
 end
