@@ -126,6 +126,6 @@ class App
 
     person_fetch[0].rentals.each do |rental|
       puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
-      end
+    end
   end
 end
