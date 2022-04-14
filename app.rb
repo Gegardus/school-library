@@ -124,8 +124,8 @@ class App
     puts 'Rentals: '
     return puts 'No records where found for the given ID' if person_fetch.empty?
 
-      person_fetch[0].rentals.each do |rental|
-        puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
+    person_fetch[0].rentals.each do |rental|
+      puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
       end
   end
 end
