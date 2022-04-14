@@ -64,7 +64,7 @@ class App
       student = Student.new(age, 'classroom', name, parent_permission: true)
     end
     @persons << student
-      puts 'Student created successfully.'
+    puts 'Student created successfully.'
   end
 
   def create_teacher
@@ -77,7 +77,7 @@ class App
     specialization = gets.chomp
     teacher = Teacher.new(age, specialization, name)
     @persons << teacher
-    puts 'Teacher created successfully'
+    puts 'Teacher created successfully.'
   end
 
   def create_book
@@ -123,8 +123,9 @@ class App
 
     puts 'Rentals: '
     return puts 'No records where found for the given ID' if person_fetch.empty?
+
       person_fetch[0].rentals.each do |rental|
         puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
       end
-      end
+  end
 end
