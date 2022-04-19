@@ -13,5 +13,4 @@ class Teacher < Person
   end
 end
 
-
   
