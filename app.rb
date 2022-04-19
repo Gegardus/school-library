@@ -4,25 +4,14 @@ require './teacher'
 require './book'
 require './classroom'
 require './rental'
+require './menu_module'
 
-class App
+class App < Module
   def initialize
     @books = []
     @persons = []
     @rentals = []
-  end
-
-  def run
-    puts 'Welcome to School Library app!'
-    until menu
-      input = gets.chomp
-      if input == '7'
-        puts 'Thank You for using this app!'
-        break
-      end
-
-      option input
-    end
+    super()
   end
 
   def list_all_books
@@ -116,7 +105,7 @@ class App
   def list_all_rentals
     return puts 'No person available' if @persons.empty?
 
-    print 'ID of the person: '
+    print 'Enter ID of the person: '
 
     person_id = gets.chomp.to_i
     person_fetch = @persons.select { |person| person.id == person_id }
