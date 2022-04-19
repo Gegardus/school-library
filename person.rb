@@ -16,6 +16,7 @@ class Person < Nameable
     @rentals = []
     super()
   end
+  # rubocop:enable Style/OptionalBooleanParameter
 
   def of_age?
     @age >= 18

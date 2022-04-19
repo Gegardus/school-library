@@ -9,6 +9,7 @@ class Student < Person
     @classroom = classroom
     super(age, name, parent_permission)
   end
+  # rubocop:enable Style/OptionalBooleanParameter
 
   def play_hooky
     "¯\(ツ)/¯"
