@@ -5,6 +5,9 @@ require './book'
 require './classroom'
 require './rental'
 require './menu_module'
+require 'json'
+require './data/read_data'
+require './data/write_data'
 
 class App < Module
   def initialize
@@ -36,6 +39,7 @@ class App < Module
     else
       puts 'Invalid input. Try again'
     end
+    save_persons
   end
 
   def create_student
@@ -48,9 +52,9 @@ class App < Module
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
-      student = Student.new(age, 'classroom', name, parent_permission: false)
+      student = Student.new(age, 'classroom', name, false)
     when 'y'
-      student = Student.new(age, 'classroom', name, parent_permission: true)
+      student = Student.new(age, 'classroom', name, true)
     end
     @persons << student
     puts 'Student created successfully.'
@@ -78,6 +82,7 @@ class App < Module
     book = Book.new(title, author)
     @books << book
     puts "Book #{title} created successfully."
+    save_books
   end
 
   def create_rental
@@ -100,6 +105,8 @@ class App < Module
     @rentals << rental
 
     puts 'Rental created successfully'
+
+    save_rentals(date, person_id, book_id)
   end
 
   def list_all_rentals
@@ -116,5 +123,11 @@ class App < Module
     person_fetch[0].rentals.each do |rental|
       puts "Date: #{rental.date} Book: \"#{rental.book.title}\" by #{rental.book.author}"
     end
+  end
+
+  def store
+    @persons = read_person
+    @books = read_book
+    @rentals = read_rentals
   end
 end
