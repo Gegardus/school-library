@@ -1,19 +1,19 @@
 class Module
   def run
     puts 'Welcome to School Library app!'
-        
+
     until menu
       input = gets.chomp
-        if input == '7'
-          puts 'Thank You for using this app!'
-          break
-        end
-    
-    option input
-        
+      if input == '7'
+        puts 'Thank You for using this app!'
+        break
       end
-    end  
-  
+
+    option input
+
+      end
+    end
+
   def menu
     puts
     puts 'Please choose an option by entering a number: '
@@ -25,7 +25,7 @@ class Module
     puts '6 - List all rentals for a given person id'
     puts '7 - Exit'
   end
-  
+
   def option(input)
     case input
     when '1'
@@ -43,5 +43,5 @@ class Module
     else
       puts 'Invalid number. Please enter a number in range of 1 .. 7.'
     end
-  end  
-end    
+  end
+end

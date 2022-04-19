@@ -14,7 +14,3 @@ class Teacher < Person
     puts "Teacher age #{age} name #{name} specialization #{@specialization} permission #{@parent_permission}"
   end
 end
-
-# teacher = Teacher.new(45, "geography")
-
-# puts teacher.to_s
