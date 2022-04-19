@@ -9,10 +9,10 @@ class Module
         break
       end
 
-    option input
+      option input
 
-      end
     end
+  end
 
   def menu
     puts
