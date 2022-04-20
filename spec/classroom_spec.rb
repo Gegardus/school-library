@@ -9,10 +9,10 @@ describe Classroom do
     end
 
     it 'the add_student method returns Student object with the correct attributes' do
-      student_1 = Student.new(55, 'algo_ds', 'Vahan', true)
+      student = Student.new(55, 'algo_ds', 'Vahan', true)
 
       algo_class = Classroom.new('algo_ds')
-      algo_class.add_student(student_1)
+      algo_class.add_student(student)
 
       expect(algo_class.students[0].name).to eq 'Vahan'
     end
